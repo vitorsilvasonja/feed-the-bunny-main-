@@ -17,6 +17,8 @@ var con;
 var con2;
 var rope;
 var bubble,bubble_img;
+var button,button2
+
 
 function preload()
 {
@@ -81,6 +83,7 @@ function setup() {
   button2 = createImg('cut_btn.png');
   button2.position(30,420);
   button2.size(50,50);
+  button2.mouseClicked(drop)
 
  // escreva um bloco de código correto para adicionar um botão para cortar a corda 
 
@@ -112,6 +115,7 @@ function draw()
     World.remove(engine.world,fruit);
     fruit = null;
    //Código para alterar a animação do coelho quando uma colisão for detectada.
+  bunny.changeAnimation("eating")
   }
   
   if(collide(fruit,bubble,40) == true)
